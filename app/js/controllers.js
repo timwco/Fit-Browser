@@ -6,9 +6,16 @@
   .controller('HomeController', function ($scope, PARSE, $http) {
 
 
-    $http.get(PARSE.URL + 'classes/entry', PARSE.CONFIG)
+    $http.get(PARSE.URL + 'classes/entry?include=excercise', PARSE.CONFIG)
       .success( function (res) {
-        $scope.data = res.results;
+        var data = res.results;
+
+        var excercises = _.uniq(_.map(data, function (d) {
+          return d.excercise.name;
+        }));
+
+        console.log(excercises);
+
       });
 
 

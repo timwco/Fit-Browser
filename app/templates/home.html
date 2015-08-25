@@ -14,9 +14,10 @@
 </md-data-table-toolbar>
 
 <md-data-table-container>
-  <table md-data-table md-row-select="selected" md-progress="deferred">
+  <table md-data-table md-progress="deferred">
     <thead>
       <tr>
+        <th name="Excercise"></th>
         <th name="Set 1"></th>
         <th name="Set 2"></th>
         <th name="Set 3"></th>
@@ -26,8 +27,16 @@
       </tr>
     </thead>
     <tbody>
-      <tr md-auto-select ng-repeat="d in data">
-        <td>{{ d.reps }}</td>
+      <tr md-auto-select ng-repeat="e in entries">
+        <td>{{ e.excercise.name }}</td>
+        <td>
+          <table>
+            <tr>
+              <td>{{ e.weight }}</td>
+              <td>{{ e.reps }}</td>
+            </tr>
+          </table>
+        </td>
       </tr>
     </tbody>
   </table>
