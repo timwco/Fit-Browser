@@ -1,0 +1,34 @@
+<md-content>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2>
+        <span>Fit Tracker</span>
+      </h2>
+    </div>
+  </md-toolbar>
+</md-content>
+
+
+<md-data-table-toolbar>
+  <h2 class="md-title">Status</h2>
+</md-data-table-toolbar>
+
+<md-data-table-container>
+  <table md-data-table md-row-select="selected" md-progress="deferred">
+    <thead>
+      <tr>
+        <th name="Set 1"></th>
+        <th name="Set 2"></th>
+        <th name="Set 3"></th>
+        <th name="Set 4"></th>
+        <th name="Set 5"></th>
+        <th name="Set 6"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr md-auto-select ng-repeat="d in data">
+        <td>{{ d.reps }}</td>
+      </tr>
+    </tbody>
+  </table>
+</md-data-table-container>
