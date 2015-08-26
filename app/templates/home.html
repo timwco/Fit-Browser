@@ -13,31 +13,31 @@
   <h2 class="md-title">Status</h2>
 </md-data-table-toolbar>
 
-<md-data-table-container>
-  <table md-data-table md-progress="deferred">
-    <thead>
-      <tr>
-        <th name="Excercise"></th>
-        <th name="Set 1"></th>
-        <th name="Set 2"></th>
-        <th name="Set 3"></th>
-        <th name="Set 4"></th>
-        <th name="Set 5"></th>
-        <th name="Set 6"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr md-auto-select ng-repeat="e in entries">
-        <td>{{ e.excercise.name }}</td>
-        <td>
-          <table>
-            <tr>
-              <td>{{ e.weight }}</td>
-              <td>{{ e.reps }}</td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</md-data-table-container>
+<div class="tableData">
+  <section class="row row-top">
+    <div class="col">Excercise</div>
+    <div class="col">
+      <h6>Set 1</h6>
+      <span>Weight</span><span>Reps</span>
+    </div>
+    <div class="col">
+      <h6>Set 2</h6>
+      <span>Weight</span><span>Reps</span>
+    </div>
+    <div class="col">
+      <h6>Set 3</h6>
+      <span>Weight</span><span>Reps</span>
+    </div>
+    <div class="col">
+      <h6>Set 4</h6>
+      <span>Weight</span><span>Reps</span>
+    </div>
+  </section>
+  <section class="row row-data" ng-repeat="group in sortedEntries | orderBy: 'group[0].excercise.order'">
+    <div class="col col-title">{{ group[0].excercise.name }}</div>
+    <div class="col" ng-repeat="entry in group">
+      <span>{{ entry.weight || 'N/A' }} <b ng-show="entry.weight">lbs</b></span>
+      <span>{{ entry.reps || 'N/A' }}</span>
+    </div>
+  </section>
+</div>

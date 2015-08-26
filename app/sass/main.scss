@@ -1,0 +1,40 @@
+.tableData {
+  width: 80%;
+  margin: 0 auto 100px auto;
+  .row {
+    overflow: hidden;
+    width: 98%;
+    border-bottom: 1px solid rgba(163,163,163,1);
+    padding: 10px 1%;
+  }
+
+  .col {
+    float: left;
+    width: 20%;
+    line-height: 25px;
+    h6 { margin: 0; font-size: 12px; }
+    span {
+      font-size: 10px;
+      width: 25%;
+      display: inline-block;
+      text-align: center;
+      border-right: 1px dotted black;
+      border-left: 1px dotted black;
+      &:last-child {
+        border-left: none;
+      }
+    }
+  }
+
+  .row-data {
+    .col-title { font-size: 13px; }
+    &:hover {
+      background-color: rgba(245,244,243,1);
+    }
+    span {
+      font-size: 13.5px;
+      font-weight: bold;
+    }
+  }
+
+}
