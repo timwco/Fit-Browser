@@ -45,3 +45,14 @@
 .tableData .row-data span {
   font-size: 13.5px;
   font-weight: bold; }
+
+footer {
+  width: 50%;
+  margin: 25px auto 0;
+  padding-top: 10px;
+  border-top: 1px solid #a3a3a3;
+  font-size: 12px;
+  text-align: center; }
+  footer a {
+    text-decoration: none;
+    color: #3f51b5; }
