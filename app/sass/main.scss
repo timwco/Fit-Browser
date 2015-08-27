@@ -1,11 +1,23 @@
-.tableData {
+.innerContainer {
   width: 80%;
   margin: 0 auto 100px auto;
+}
+
+.dateRange {
+  padding-top: 30px;
+  width: 25%;
+}
+
+.tableData {
   .row {
     overflow: hidden;
     width: 98%;
     border-bottom: 1px solid rgba(163,163,163,1);
     padding: 10px 1%;
+  }
+
+  .col-main-title {
+    padding-top: 25px;
   }
 
   .col {

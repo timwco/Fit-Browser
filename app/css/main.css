@@ -1,31 +1,43 @@
-.tableData {
+.innerContainer {
   width: 80%;
   margin: 0 auto 100px auto; }
-  .tableData .row {
-    overflow: hidden;
-    width: 98%;
-    border-bottom: 1px solid #a3a3a3;
-    padding: 10px 1%; }
-  .tableData .col {
-    float: left;
-    width: 20%;
-    line-height: 25px; }
-    .tableData .col h6 {
-      margin: 0;
-      font-size: 12px; }
-    .tableData .col span {
-      font-size: 10px;
-      width: 25%;
-      display: inline-block;
-      text-align: center;
-      border-right: 1px dotted black;
-      border-left: 1px dotted black; }
-      .tableData .col span:last-child {
-        border-left: none; }
-  .tableData .row-data .col-title {
-    font-size: 13px; }
-  .tableData .row-data:hover {
-    background-color: #f5f4f3; }
-  .tableData .row-data span {
-    font-size: 13.5px;
-    font-weight: bold; }
+
+.dateRange {
+  padding-top: 30px;
+  width: 25%; }
+
+.tableData .row {
+  overflow: hidden;
+  width: 98%;
+  border-bottom: 1px solid #a3a3a3;
+  padding: 10px 1%; }
+
+.tableData .col-main-title {
+  padding-top: 25px; }
+
+.tableData .col {
+  float: left;
+  width: 20%;
+  line-height: 25px; }
+  .tableData .col h6 {
+    margin: 0;
+    font-size: 12px; }
+  .tableData .col span {
+    font-size: 10px;
+    width: 25%;
+    display: inline-block;
+    text-align: center;
+    border-right: 1px dotted black;
+    border-left: 1px dotted black; }
+    .tableData .col span:last-child {
+      border-left: none; }
+
+.tableData .row-data .col-title {
+  font-size: 13px; }
+
+.tableData .row-data:hover {
+  background-color: #f5f4f3; }
+
+.tableData .row-data span {
+  font-size: 13.5px;
+  font-weight: bold; }
