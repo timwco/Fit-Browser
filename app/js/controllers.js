@@ -3,7 +3,19 @@
 
   angular.module('Fit')
 
-  .controller('HomeController', function ($scope, PARSE, $http, DateService) {
+  .controller('LoginController', function ($scope, UserService) {
+
+    UserService.checkStatus();
+
+    $scope.logInUser = function (user) {
+      UserService.login(user);
+    };
+
+  })
+
+  .controller('HomeController', function ($scope, PARSE, $http, DateService, UserService) {
+
+    UserService.checkStatus();
 
     $scope.sortedEntries = null;
     $scope.dates = DateService.allDates();

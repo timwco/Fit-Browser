@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('Fit', ['md.data.table', 'ngMaterial', 'ui.router'])
+  angular.module('Fit', ['ngMaterial', 'ui.router', 'ngCookies'])
 
   .constant('PARSE', {
     URL: 'https://api.parse.com/1/',
@@ -16,19 +16,26 @@
   .config( function ($stateProvider, $urlRouterProvider) {
 
     $stateProvider
+      .state('login', {
+        url: '/login',
+        templateUrl: 'templates/login.html',
+        controller: 'LoginController'
+      })
       .state('home', {
         url: '/',
         templateUrl: 'templates/home.html',
         controller: 'HomeController'
-      });
-
-
+      })
+      .state('logout', {
+        url: '/logout',
+        controller: function (UserService) {
+          UserService.logout();
+        }
+      })
 
     $urlRouterProvider.otherwise('/');
 
-  })
-
-
+  });
 
 
 }());
